@@ -20,6 +20,7 @@ import com.example.week6assignment.parcel.UserData
 import com.example.week6assignment.parcel.UserData.Companion.userData
 import com.example.week6assignment.parcel.UserData.Companion.userList
 import com.example.week6assignment.userDetails.userDetails
+var profile = ""
 
 class DashboardFragment : Fragment() {
 
@@ -48,10 +49,13 @@ class DashboardFragment : Fragment() {
 
             if (rbMale.isChecked) {
                 gender = "Male"
+                profile = "https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg"
+
             } else if (rbFemale.isChecked) {
                 gender = "Female"
+                profile = "https://www.pngitem.com/pimgs/m/24-248373_computer-icons-female-user-profile-avatar-material-profile.png"
             }
-            userList.add(userDetails(etFullname.text.toString(), etAge.text.toString(), etImage.text.toString(), gender, etAddress.text.toString()))
+            userList.add(userDetails(etFullname.text.toString(), etAge.text.toString(), profile, gender, etAddress.text.toString()))
             Toast.makeText(context, etFullname.text.toString(), Toast.LENGTH_SHORT).show()
             val intent = Intent(context, MainActivity::class.java)
             startActivity(intent)

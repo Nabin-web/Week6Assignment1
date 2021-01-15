@@ -8,7 +8,7 @@ class UserData(){
         var userList = arrayListOf<userDetails>()
 
         fun userData(){
-            userList.add(userDetails("Nabin Kutu", "21", "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
+            userList.add(userDetails("Nabin Kutu", "21", "https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg"
           , "Male", "Kathmandu"))
         }
     }
